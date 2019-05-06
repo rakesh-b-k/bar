@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Bar</title>
+        <script src="chart.min.js"></script>
+    </head>
+
+    <body>
+
+        <div class="container">
+            <center>
+                <h1>Bar Chart</h1>
+            </center>
+
+            <canvas id="disp" width="100%" height="500px"></canvas>
+
+        </div>
+
+        <script type="text/javascript">
+
+            var ctx = document.getElementById("disp").getContext("2d");
+
+            var chart = new Chart(ctx, {
+                type: "bar",
+
+                data : {
+                   
+                    labels:["Php","Python","React","Angular","Zend","CodeIgniter"],
+
+                    datasets:[{
+                        label:"2018",
+
+                        data:[100, 80, 60, 45, 45, 45],
+
+                        backgroundColor:["red", "pink", "orange", "yellow", "blue", "green"],
+
+                        borderColor: "#000",
+
+                        borderWidth: 1 ,
+                       
+                    },
+                    {
+                        label: "2017",
+                        
+                        data:[75, 50, 45, 43, 43, 43],
+
+                        backgroundColor:["lightgrey", "lightpink", "lightgrey", "lightyellow", "lightblue", "lightgreen"],
+                        
+                        borderColor: "#333",
+                        
+                        borderWidth: 1
+                    }]
+
+                },
+
+                options : {
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            
+            });
+
+        </script>
+    </body>
+
+</html>
